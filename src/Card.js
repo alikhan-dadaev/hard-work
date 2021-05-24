@@ -14,11 +14,8 @@ function Card(product) {
                 <div className="card-name">{product.name}</div>
                 <div>{product.rating}</div>
                 <div className="card-price">{product.price}Р</div>
-                <Button
-
-                />
+                <Button setBought={product.setBought} id={product.id} bought={product.bought} />
             </div>
-
 
 
         </div>

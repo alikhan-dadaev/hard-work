@@ -1,21 +1,21 @@
 
-import Logo from "./Logo/Logo";
 import Card from "./Card";
+import React from "react";
+import App from "./App";
 
 
 
 
-function Contnent(product) {
-
-
-    const newDatabase = product.database.map((product) => {
+function Contnent(products) {
+    const newDatabase = products.database.map((product) => {
         return <Card
-            id = {product.id}
-            name = {product.name}
-            price = {product.price}
-            boutght = {product.bought}
-            rating  = {product.rating}
-            image = {product.image}
+            id={product.id}
+            name={product.name}
+            price={product.price}
+            boutght={product.bought}
+            rating={product.rating}
+            image={product.image}
+            setBought={products.setBougth}
         />
     })
     return (

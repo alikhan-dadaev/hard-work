@@ -1,11 +1,17 @@
-import React, {useState} from 'react';
+
 import Header from "./Header";
 import Contnent from "./Contnent";
+import {useState} from "react";
 
 
 
-const [database, setDatabase] = useState(
-    [
+
+
+
+
+
+function App() {
+    const [database, setDatabase] = useState(  [
         {
             id: 1,
             name: "MacBook",
@@ -78,19 +84,44 @@ const [database, setDatabase] = useState(
             rating: 5,
             image: "http://intocode.ru/d/react-project-1/images/9.jpg"
         }
-    ]
-)
-function App(props) {
+    ])
+
+    const setBought = (id) => {
+        const data = database.map((item) => {
+            if (id ===item.id) {
+               if (item.bought === false) {
+                   return{
+                       ...item,
+                       bought: true
+                   }
+               } else {
+                   return {
+                       ...item,
+                       bought: false
+                   };
+               }
+            }
+                return  item;
+        })
+        setDatabase(data)
+
+    }
+
+
     return (
         <div className="app">
-            <div><Header /></div>
+            <div><Header database={database} setDatabase={setDatabase} /></div>
             <div>
                 <Contnent
+                    setBougth={setBought}
                     database={database}
-            />
+                    setDatabase={setDatabase}
+
+                />
             </div>
         </div>
     );
 }
+
 
 export default App;
