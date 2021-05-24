@@ -6,13 +6,13 @@ import App from "./App";
 
 
 
-function Contnent(products) {
+function Content(products) {
     const newDatabase = products.database.map((product) => {
         return <Card
             id={product.id}
             name={product.name}
             price={product.price}
-            boutght={product.bought}
+            bought={product.bought}
             rating={product.rating}
             image={product.image}
             setBought={products.setBougth}
@@ -25,4 +25,4 @@ function Contnent(products) {
     );
 }
 
-export default Contnent;
+export default Content;

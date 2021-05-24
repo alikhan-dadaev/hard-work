@@ -1,6 +1,6 @@
 
 import Header from "./Header";
-import Contnent from "./Contnent";
+import Content from "./Contnent";
 import {useState} from "react";
 
 
@@ -112,7 +112,7 @@ function App() {
         <div className="app">
             <div><Header database={database} setDatabase={setDatabase} /></div>
             <div>
-                <Contnent
+                <Content
                     setBougth={setBought}
                     database={database}
                     setDatabase={setDatabase}
