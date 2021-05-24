@@ -13,7 +13,9 @@ function Header(props) {
                 <Menu />
             </div>
             <div>
-                <Checkout database={props.database}  setDatabase={props.setDatabase} />
+                <Checkout
+                    database={props.database}
+                />
             </div>
         </div>
     );

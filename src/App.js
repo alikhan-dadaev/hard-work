@@ -7,9 +7,6 @@ import {useState} from "react";
 
 
 
-
-
-
 function App() {
     const [database, setDatabase] = useState(  [
         {
@@ -107,13 +104,16 @@ function App() {
 
     }
 
-
     return (
         <div className="app">
-            <div><Header database={database} setDatabase={setDatabase} /></div>
+            <div>
+                <Header
+                    database={database}
+                />
+            </div>
             <div>
                 <Content
-                    setBougth={setBought}
+                    setBought={setBought}
                     database={database}
                     setDatabase={setDatabase}
 

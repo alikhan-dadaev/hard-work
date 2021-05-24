@@ -15,7 +15,7 @@ function Content(products) {
             bought={product.bought}
             rating={product.rating}
             image={product.image}
-            setBought={products.setBougth}
+            setBought={products.setBought}
         />
     })
     return (
